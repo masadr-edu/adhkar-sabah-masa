@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أذكار الصباح والمساء | حصن المسلم الموثوق</title>
+<meta name="description" content="موقع أذكار الصباح والمساء بأحاديث صحيحة موثقة بالمصادر، مع مسبحة إلكترونية وتحكم بالخط والثيم.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
+</head>
+<body>
+
+<div class="bg-pattern" aria-hidden="true"></div>
+
+<header class="header">
+  <div class="container header-inner">
+    <div class="brand">
+      <div class="logo">☪</div>
+      <div>
+        <h1>أذكار الصباح والمساء</h1>
+        <p>حصنُ المسلم • أذكار صحيحة موثّقة بالمصادر</p>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="font-controls" title="حجم الخط">
+        <button id="fontDecrease" aria-label="تصغير الخط">أ−</button>
+        <span id="fontSizeLabel">100%</span>
+        <button id="fontIncrease" aria-label="تكبير الخط">أ+</button>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="تبديل الثيم">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+        <span id="themeLabel">ليلي</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero container">
+  <div class="hero-card">
+    <div class="hero-time" id="heroTime">🌅 وقت الصباح</div>
+    <h2>﴿ فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ ﴾ <span class="aya-ref">[البقرة: 152]</span></h2>
+    <p class="hero-sub">جميع الأذكار من الأحاديث الصحيحة والحسنة فقط — مع المصدر ودرجة الحديث والفضل. اختر وردك وابدأ الذكر، ولكل ذكر مسبحته الخاصة.</p>
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="morning" role="tab">🌅 أذكار الصباح</button>
+      <button class="tab" data-tab="evening" role="tab">🌙 أذكار المساء</button>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-info">
+        <span id="progressText">0 / 0 مكتمل</span>
+        <span id="progressPercent">0%</span>
+      </div>
+      <div class="progress-bar"><div id="progressFill"></div></div>
+      <div class="hero-actions">
+        <button id="resetAll" class="btn ghost">↺ إعادة تعيين الكل</button>
+        <span class="hint">وقت الصباح: من الفجر حتى الشروق • وقت المساء: من العصر حتى العشاء</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <div id="adhkarList" class="cards"></div>
+
+  <section class="sources-box">
+    <h3>📚 منهج التوثيق والمصادر</h3>
+    <ul>
+      <li>اعتمدنا على <strong>حصن المسلم</strong> للشيخ سعيد القحطاني بتحقيقات الشيخ <strong>الألباني</strong> و <strong>ابن باز</strong>.</li>
+      <li>استبعدنا الأحاديث الضعيفة المشهورة مثل: «اللهم أجرني من النار سبعًا» و «من قرأ حم الدخان» ولفظ «سيد الاستغفار عشرًا» — لضعفها.</li>
+      <li>المراجع الأصلية: صحيح البخاري، صحيح مسلم، سنن أبي داود (5082، 5074، 5067، 5072، 5088، 5090)، سنن الترمذي (3391، 3575)، سنن ابن ماجه، مسند أحمد، المستدرك للحاكم، صحيح الترغيب والترهيب، صحيح الجامع.</li>
+      <li>حديث «حسبي الله سبع مرات» رواه أبو داود (5081) وفي إسناده مقال، حسّنه بعضهم موقوفًا — أبقيناه مع التنبيه لأنه مشهور العمل به.</li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p>صُنع بحب لخدمة الذاكرين • <span id="year"></span> • جميع النصوص بالتشكيل الدقيق</p>
+    <p class="small">نصيحة: الأفضل التكرار باللسان مع التدبر، واستخدم زر المسبحة لكل ضغطة.</p>
+  </footer>
+</main>
+
+<button id="toTop" aria-label="العودة للأعلى">↑</button>
+
+<script src="adhkar.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
